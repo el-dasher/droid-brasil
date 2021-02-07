@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.element-loading {
+  display: flex;
+  padding-top: 25vh;
+  justify-content: center;
+}
+
+#main {
+  padding: 25px;
+}
