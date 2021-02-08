@@ -1,3 +1,3 @@
-export default function Index() {
+export default function IndexOage() {
   return <div>INDEX</div>;
 }
