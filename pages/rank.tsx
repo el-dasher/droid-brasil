@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import { OsuDroidUser } from '../utils/interfaces';
 
-import PlayerCard from '../components/rank/playerCard';
+import PlayerCard from '../components/rank/PlayerCard';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItemText';
