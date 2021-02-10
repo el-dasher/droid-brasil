@@ -12,7 +12,17 @@ export default function App({ Component, pageProps }: props) {
   return (
     <CssBaseline>
       <NavBar />
-      <div id="main">
+      <div
+        id="main"
+        style={{
+          backgroundImage: "url('./assets/background1.jpg')",
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '225vw'
+        }}
+      >
         <Component {...pageProps} />
       </div>
     </CssBaseline>

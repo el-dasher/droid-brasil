@@ -21,6 +21,21 @@ a {
   justify-content: center;
 }
 
+.generic-list {
+  padding: 10px;
+  width: 75vw;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hoverable:hover {
+  cursor: pointer;
+}
+
 #main {
-  padding: 10vh;
+  padding-top: 12.5vh;
 }

@@ -20,7 +20,12 @@ function PlayerCard({ user, startRaised }: Props) {
   return (
     <Fragment>
       <Card
-        style={{ alignSelf: 'center' }}
+        className="hoverable"
+        style={{
+          alignSelf: 'center',
+          backgroundColor: 'rgba(255, 255, 255, .98)',
+          border: 'solid'
+        }}
         onMouseOver={toggleRaised}
         onMouseOut={toggleRaised}
         raised={raised}
@@ -34,9 +39,9 @@ function PlayerCard({ user, startRaised }: Props) {
           <Typography variant="body1">
             Rank: #{user.rank_score} <br />
             Acc: {user.overall_acc}% <br />
-            Aim: {user.aim.toFixed(2)} <br />
-            Speed: {user.speed.toFixed(2)} <br />
-            Reading: {user.reading.toFixed(2)}
+            Aim: {user.aim!.toFixed(2)} <br />
+            Speed: {user.speed!.toFixed(2)} <br />
+            Reading: {user.reading!.toFixed(2)}
           </Typography>
         </CardContent>
       </Card>

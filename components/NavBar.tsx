@@ -19,22 +19,18 @@ export default function PersistentDrawerRight() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
+  const handleDrawer = () => {
+    setOpen(!open);
   };
 
   return (
     <div>
-      <AppBar position="fixed">
+      <AppBar position="fixed" color="secondary">
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            onClick={handleDrawerOpen}
+            onClick={handleDrawer}
           >
             <MenuIcon />
           </IconButton>
@@ -42,7 +38,7 @@ export default function PersistentDrawerRight() {
         </Toolbar>
       </AppBar>
       <Drawer variant="persistent" anchor="right" open={open}>
-        <IconButton onClick={handleDrawerClose}>
+        <IconButton onClick={handleDrawer}>
           <ChevronRightIcon />
         </IconButton>
         <Divider />
