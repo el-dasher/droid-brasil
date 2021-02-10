@@ -23,7 +23,7 @@ function PlayerCard({ user, startRaised }: Props) {
         className="hoverable"
         style={{
           alignSelf: 'center',
-          backgroundColor: 'rgba(255, 255, 255, .98)',
+          backgroundColor: 'rgba(255, 255, 255, .95)',
           border: 'solid'
         }}
         onMouseOver={toggleRaised}
@@ -36,7 +36,7 @@ function PlayerCard({ user, startRaised }: Props) {
           subheader={`${user.total_dpp.toFixed(2)}dpp`}
         />
         <CardContent style={{ paddingLeft: '50px' }}>
-          <Typography variant="body1">
+          <Typography variant="h6">
             Rank: #{user.rank_score} <br />
             Acc: {user.overall_acc}% <br />
             Aim: {user.aim!.toFixed(2)} <br />
