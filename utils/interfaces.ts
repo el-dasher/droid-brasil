@@ -1,10 +1,12 @@
 interface OsuDroidPlay {
   title: string;
   accuracy: number;
+  score: number;
   combo: number;
-  hash: string;
   miss: number;
   mods: string;
+  timestamp?: string;
+  hash?: string | null;
   pp?: number;
 }
 
@@ -14,8 +16,8 @@ interface OsuDroidUser {
   overall_acc: number;
   total_score: Number;
   rank_score: string;
-  total_dpp: number;
   avatar: string;
+  total_dpp?: number;
   play_count?: Number;
   country?: string;
   recent_plays?: Array<OsuDroidPlay>;

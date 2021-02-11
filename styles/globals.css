@@ -36,6 +36,15 @@ a {
   cursor: pointer;
 }
 
+.default-container {
+  border: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  width: 75vw;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+}
+
 #main {
   padding-top: 12.5vh;
 }

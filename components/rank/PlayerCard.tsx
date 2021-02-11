@@ -22,6 +22,7 @@ function PlayerCard({ user, startRaised }: Props) {
       <Card
         className="hoverable"
         style={{
+          justifySelf: 'center',
           alignSelf: 'center',
           backgroundColor: 'rgba(255, 255, 255, .95)',
           border: 'solid'
@@ -33,15 +34,21 @@ function PlayerCard({ user, startRaised }: Props) {
         <CardHeader
           avatar={<Avatar src={user.avatar} />}
           title={user.username}
-          subheader={`${user.total_dpp.toFixed(2)}dpp`}
+          subheader={`${user.total_dpp!.toFixed(2)}dpp`}
         />
         <CardContent style={{ paddingLeft: '50px' }}>
           <Typography variant="h6">
-            Rank: #{user.rank_score} <br />
-            Acc: {user.overall_acc}% <br />
-            Aim: {user.aim!.toFixed(2)} <br />
-            Speed: {user.speed!.toFixed(2)} <br />
-            Reading: {user.reading!.toFixed(2)}
+            Rank: #{user.rank_score.toLocaleString()}
+            <br />
+            Acc: {user.overall_acc.toLocaleString()}%
+            <br />
+            Aim: {user.aim!.toFixed(2).toLocaleString()}
+            <br />
+            Speed: {user.speed!.toFixed(2).toLocaleString()}
+            <br />
+            Reading: {user.reading!.toFixed(2).toLocaleString()}
+            <br />
+            Score: {user.total_score.toLocaleString()}
           </Typography>
         </CardContent>
       </Card>
